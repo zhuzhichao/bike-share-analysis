@@ -11835,7 +11835,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_first_point</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -11854,8 +11854,7 @@ div#notebook {
         <span class="c1">## 待办：对 DictReader 对象使用函数     ##</span>
         <span class="c1">## 从而读取数据文件的第一条骑行记录并将其存储为一个变量     ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/csv.html#reader-objects ##</span>
-        <span class="k">for</span> <span class="n">first_trip</span> <span class="ow">in</span> <span class="n">trip_reader</span><span class="p">:</span>
-            <span class="k">break</span><span class="p">;</span>
+        <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">trip_reader</span><span class="p">))</span>
                 
         <span class="c1">## 待办：用 pprint 库来输出第一条骑行记录。 ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/pprint.html     ##</span>
@@ -12605,7 +12604,7 @@ NYC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>如果你按示例的用法来用 <code>.hist()</code> 和 <code>.show()</code> 函数，就可能得到一张完全在意料之外的统计图，该图左侧将有一条极长的柱形，相邻的第二条柱形则可能十分短小，而且中间和右边将空出许多空间，这个时候你可以看看 x 轴的时长值，你会发现，数据里有些高度异常的极端值，不过你不需要重新处理数据，只需为 <code>.hist()</code> 函数再加一些参数，限制绘图数据的范围即可，函数相关文件请见<a href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist">[这里]</a>.</p>
 <p><strong>问题 5</strong>：用 <code>.hist()</code> 函数的参数来为所选城市的会员骑行时长绘制分布图，并单独为散客做同样的操作。限制统计图的范围，仅绘制骑行时长小于 75 分钟的数据。另外，你可以设置每条柱形之间有五分钟的间隔。在每组数据中，各分布图的峰值分别在哪？你会如何描述每个分布图的形状？</p>
-<p><strong>答案</strong>：散客的峰值在20分钟，会员峰值在10分钟。</p>
+<p><strong>答案</strong>：散客的峰值在20分钟，会员峰值在10分钟。两个分布图都为正偏态分布。</p>
 
 </div>
 </div>
